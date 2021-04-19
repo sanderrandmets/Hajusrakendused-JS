@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tallinna ilm</title>
+</head>
+<body>
+    <h1 id="city"><?= $oWeather->name; ?> ilm</h1>
+    <h2 id="main"><?= $oWeather->weather[0]->main; ?></h2>
+    <h2 id="wind-speed">Tuulekiirus: <?= $oWeather->wind->speed; ?></h2>
+    <h2 id="humidity">Õhuniiskus: <?= $oWeather->main->humidity; ?></h2>
+    <h2 id="pressure">Õhurõhk: <?= $oWeather->main->pressure; ?></h2>
+    <h2 id="temp-min">Miinimium temperatuur: <?= $oWeather->main->temp_min; ?></h2>
+    <h2 id="feels-like">Tundub nagu: <?= $oWeather->main->feels_like; ?></h2>
+
+
+    <!--<img src="http://openweathermap.org/img/wn/<?= $oWeather->weather[0]->icon; ?>@2x.png" alt="" srcset="">-->
+    <script src="app.js"></script>
+</body>
+</html>
