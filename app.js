@@ -2,16 +2,16 @@
 
 fetch('https://api.openweathermap.org/data/2.5/weather?q=Tallinn&appid=0580dd34c41f5bf35df84fbe5d9a7a38&units=metric')
 
-.then(res => {
-    return res.json()
-})
-.then (data => {
-    console.log(data)
-    const city = document.getElementById('city')  
-    const dog_div = document.createElement('div')
-    dog_div.innerHTML = '<image src="' + data.message + '">'
-    dog_div.classList.add('dog')
-    container.append(dog_div)
+    .then(res => {
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+        const city = document.getElementById('city')
+        const weather = document.createElement('div')
+        weather_div.innerHTML = '<image src="' + data.message + '">'
+        weather_div.classList.add('dog')
+        container.append(weather_div)
 
 /*const city = document.getElementById('city').innerText
 const main = document.getElementById('main').innerText
